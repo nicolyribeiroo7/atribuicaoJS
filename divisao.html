@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Operador /=</title>
+</head>
+
+<body>
+
+<h2>Operador de Atribuição com Divisão (/=)</h2>
+
+<label>Digite o valor inicial de x:</label>
+<input type="number" id="valorX"><br><br>
+
+<label>Digite o valor divisor:</label>
+<input type="number" id="valorDiv"><br><br>
+
+<button onclick="executar()">Calcular</button>
+
+<div id="resultado"></div>
+
+<script>
+function executar() {
+
+    let x = Number(document.getElementById("valorX").value);
+    let div = Number(document.getElementById("valorDiv").value);
+
+    let passo1 = "1️⃣ Valor inicial de x: " + x;
+    let passo2 = "2️⃣ Valor divisor: " + div;
+    let passo3 = "3️⃣ Operação: x /= " + div;
+    let equivalente = "   ➡️ Equivalente a: x = x / " + div;
+
+    x /= div;
+
+    let passo4 = "4️⃣ Resultado final: x = " + x;
+
+    document.getElementById("resultado").innerHTML =
+        passo1 + "<br>" +
+        passo2 + "<br>" +
+        passo3 + "<br>" +
+        equivalente + "<br>" +
+        passo4;
+}
+</script>
+
+</body>
+</html>

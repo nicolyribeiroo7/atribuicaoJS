@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Operador</title>
+</head>
+
+<body>
+
+<h2>Operador de Atribuição (=)</h2>
+
+<label>Digite um valor para x:</label>
+<input type="number" id="valorX">
+<button onclick="executar()">Atribuir</button>
+
+<div id="resultado"></div>
+
+<script>
+function executar() {
+
+    let entrada = document.getElementById("valorX").value;
+
+    let x;
+
+    let passo1 = "1️⃣ O usuário digitou: " + entrada;
+    x = Number(entrada);
+    let passo2 = "2️⃣ O valor foi convertido para número.";
+    let passo3 = "3️⃣ x recebeu o valor: " + x;
+    let passo4 = "4️⃣ Resultado final: x = " + x;
+
+    document.getElementById("resultado").innerHTML =
+        passo1 + "<br>" +
+        passo2 + "<br>" +
+        passo3 + "<br>" +
+        passo4;
+}
+</script>
+
+</body>
+</html>
